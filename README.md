@@ -4,7 +4,7 @@ Generate UUID V4.
 
 ## Installation
 
-### Unix users (Linux, BSDs and MacOSX)
+### Unix users (Linux and MacOSX)
 
 Unix users may download and install latest *uuid* release with command:
 

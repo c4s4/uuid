@@ -1,0 +1,19 @@
+[package]
+name = "uuid"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.uuid]
+version = "1.8.0"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
+
+[profile.release]
+strip = true      # Automatically strip symbols from the binary
+opt-level = "z"   # Optimize for size
+lto = true        # Link time optimizatin, removes dead code
+codegen-units = 1 # Allow for maximum size reduction optimizations
+# panic = "abort"   # Don't print stack trace on panic
+# Set RUSTFLAGS="-Zlocation-detail=none" to remove file, line and column information
